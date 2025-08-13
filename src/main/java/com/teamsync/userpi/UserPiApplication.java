@@ -30,7 +30,10 @@ public class UserPiApplication {
                 @Override
                 public void addCorsMappings(CorsRegistry registry) {
                     registry.addMapping("/api/users/**")
-                            .allowedOrigins("http://localhost:4200") // URL du frontend Angular
+                            .allowedOrigins(
+                                    "http://localhost:4200",
+                                    "https://gestion-des-stagiaire-pour-steg-frontend-angular.onrender.com"
+                            )
                             .allowedMethods("GET", "POST", "PUT", "DELETE")
                             .allowedHeaders("*")
                             .allowCredentials(true);
