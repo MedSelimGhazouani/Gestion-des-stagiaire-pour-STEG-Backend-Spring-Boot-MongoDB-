@@ -18,32 +18,4 @@ public class UserPiApplication {
         SpringApplication.run(UserPiApplication.class, args);
 
     }
-    @Configuration
-
-
-    public class  CorsConfig {
-
-
-        @Bean
-        public WebMvcConfigurer corsConfigurer() {
-            return new WebMvcConfigurer() {
-                @Override
-                public void addCorsMappings(CorsRegistry registry) {
-                    registry.addMapping("/api/users/**")
-                            .allowedOrigins(
-                                    "http://localhost:4200",
-                                    "https://gestion-des-stagiaire-pour-steg-frontend-angular.onrender.com"
-                            )
-                            .allowedMethods("GET", "POST", "PUT", "DELETE")
-                            .allowedHeaders("*")
-                            .allowCredentials(true);
-                }
-            };
-        }
-
-
-
-    }
-
-
 }
