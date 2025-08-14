@@ -35,7 +35,6 @@ import java.util.*;
 
 @Slf4j
 @AllArgsConstructor
-@CrossOrigin(origins = "http://localhost:4200", allowCredentials = "true")
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
